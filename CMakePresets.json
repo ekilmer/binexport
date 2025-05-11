@@ -37,7 +37,7 @@
       "description": "Speed up multi-config generators by generating only one configuration instead of the defaults",
       "hidden": true,
       "cacheVariables": {
-        "CMAKE_CONFIGURATION_TYPES": "Release"
+        "CMAKE_CONFIGURATION_TYPES": "RelWithDebInfo"
       }
     },
     {
@@ -58,7 +58,8 @@
         "VCPKG_TARGET_TRIPLET": "universal-macos-release",
         "CMAKE_OSX_ARCHITECTURES": "x86_64;arm64",
         "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0",
-        "CMAKE_XCODE_ATTRIBUTE_OTHER_CODE_SIGN_FLAGS": "-o linker-signed"
+        "CMAKE_XCODE_ATTRIBUTE_OTHER_CODE_SIGN_FLAGS": "-o linker-signed",
+        "CMAKE_GTEST_DISCOVER_TESTS_DISCOVERY_MODE": "PRE_TEST"
       },
       "environment": {
         "VCPKG_DEFAULT_HOST_TRIPLET": "universal-macos-release"
@@ -81,16 +82,54 @@
       "configurePreset": "binja-vcpkg"
     },
     {
+      "name": "ci-common-config",
+      "hidden": true,
+      "configuration": "RelWithDebInfo",
+      "jobs": 4
+    },
+    {
       "name": "ci-ubuntu-vcpkg",
-      "configurePreset": "ci-ubuntu-vcpkg"
+      "configurePreset": "ci-ubuntu-vcpkg",
+      "inherits": ["ci-common-config"]
     },
     {
       "name": "ci-macos-vcpkg",
-      "configurePreset": "ci-macos-vcpkg"
+      "configurePreset": "ci-macos-vcpkg",
+      "inherits": ["ci-common-config"]
     },
     {
       "name": "ci-windows-vcpkg",
-      "configurePreset": "ci-windows-vcpkg"
+      "configurePreset": "ci-windows-vcpkg",
+      "inherits": ["ci-common-config"]
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "binja-vcpkg",
+      "configurePreset": "binja-vcpkg"
+    },
+    {
+      "name": "ci-common-config",
+      "hidden": true,
+      "configuration": "RelWithDebInfo",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+    {
+      "name": "ci-ubuntu-vcpkg",
+      "configurePreset": "ci-ubuntu-vcpkg",
+      "inherits": ["ci-common-config"]
+    },
+    {
+      "name": "ci-macos-vcpkg",
+      "configurePreset": "ci-macos-vcpkg",
+      "inherits": ["ci-common-config"]
+    },
+    {
+      "name": "ci-windows-vcpkg",
+      "configurePreset": "ci-windows-vcpkg",
+      "inherits": ["ci-common-config"]
     }
   ]
 }

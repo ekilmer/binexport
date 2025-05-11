@@ -29,7 +29,10 @@
     "tests": {
       "description": "Development tests",
       "dependencies": [
-        "gtest",
+        {
+          "name": "gtest",
+          "features": ["cxx17"]
+        },
         {
           "name": "abseil",
           "features": ["test-helpers"]

@@ -87,14 +87,13 @@ jobs:
           -DIdaSdk_ROOT_DIR=build/idasdk_teams82
 
     - name: Build
-      run: cmake --build build --preset ci-${{matrix.name}}-vcpkg --config Release -j 4
+      run: cmake --build --preset ci-${{matrix.name}}-vcpkg
 
     - name: Test
-      working-directory: build/ci-${{matrix.name}}-vcpkg
-      run: ctest --build-config Release --output-on-failure -R '^[A-Z]'
+      run: ctest --preset ci-${{matrix.name}}-vcpkg -R '^[A-Z]'
 
     - name: Install
-      run: cmake --build build --preset ci-${{matrix.name}}-vcpkg --target install
+      run: cmake --build --preset ci-${{matrix.name}}-vcpkg --target install
 
     - name: Upload Build Artifacts
       uses: actions/upload-artifact@v4.6.2
