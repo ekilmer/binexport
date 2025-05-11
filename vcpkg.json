@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/main/docs/vcpkg.schema.json",
+  "name": "binexport",
+  "description": "Export disassemblies into Protocol Buffers",
+  "version": "12",
+  "dependencies": [
+    "abseil",
+    "boost-graph",
+    "protobuf",
+    {
+      "name": "protobuf",
+      "host": true
+    }
+  ],
+  "features": {
+    "binaryninja": {
+      "description": "Build with support for Binary Ninja",
+      "dependencies": [
+        {
+          "name": "binaryninja-api",
+          "$binja-version-comment": "5.0",
+          "version>=": "100.103.3"
+        }
+      ]
+    },
+    "tests": {
+      "description": "Development tests",
+      "dependencies": [
+        "gtest",
+        {
+          "name": "abseil",
+          "features": ["test-helpers"]
+        }
+      ]
+    },
+    "benchmark": {
+      "description": "Run benchmarks",
+      "dependencies": [
+        "benchmark",
+        {
+          "name": "binexport",
+          "features": ["tests"]
+        }
+      ]
+    }
+  },
+  "$builitin-baseline-comment": "Commit SHA for tag 2025.04.09",
+  "builtin-baseline": "ce613c41372b23b1f51333815feb3edd87ef8a8b"
+}

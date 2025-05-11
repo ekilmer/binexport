@@ -24,7 +24,7 @@ target_link_libraries(${binexport_bn_plugin_name} PRIVATE
   absl::status
   absl::statusor
   absl::strings
-  BinaryNinja::API
+  binaryninjaapi
   binexport_core
 )
 set_target_properties(${binexport_bn_plugin_name} PROPERTIES

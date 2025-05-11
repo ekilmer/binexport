@@ -40,7 +40,23 @@ list(APPEND CMAKE_MODULE_PATH "${BINEXPORT_SOURCE_DIR}/cmake")
 include(CompileOptions)
 include(Util)
 include(BinExportOptions)
-include(BinExportDeps)
+if(BinExport_DOWNLOAD_DEPS)
+  include(BinExportDeps)
+else()
+  find_package(absl REQUIRED)
+  find_package(Protobuf REQUIRED)
+  set(Protobuf_LIBRARIES protobuf::libprotobuf CACHE INTERNAL "")
+  find_package(Boost REQUIRED COMPONENTS graph)
+  if(BINEXPORT_ENABLE_BINARYNINJA)
+    find_package(BinaryNinjaAPI REQUIRED)
+  endif()
+  if(BUILD_TESTING AND BINEXPORT_BUILD_TESTING)
+    find_package(GTest REQUIRED)
+    if(BINEXPORT_BUILD_BENCHMARK)
+      find_package(benchmark REQUIRED)
+    endif()
+  endif()
+endif()
 
 if(BUILD_TESTING AND BINEXPORT_BUILD_TESTING)
   include(CTest)
@@ -98,19 +114,18 @@ target_include_directories(binexport_base INTERFACE
   "${PROJECT_SOURCE_DIR}/stubs"
   "${PROJECT_BINARY_DIR}/gen_include"
   "${PROJECT_BINARY_DIR}/src_include"
-  "${Boost_INCLUDE_DIR}"
-  "${Protobuf_INCLUDE_DIR}"
 )
 target_link_libraries(binexport_base INTERFACE
   ${Protobuf_LIBRARIES}  # Same as protobuf::libprotobuf
+  Boost::graph
 )
 
 if(BUILD_TESTING AND BINEXPORT_BUILD_TESTING)
   # Interface library to be used by tests that don't need data files
   add_library(binexport_test_base INTERFACE)
   target_link_libraries(binexport_test_base INTERFACE
-    gtest_main
-    gmock
+    GTest::gtest_main
+    GTest::gmock
   )
 endif()
 
@@ -311,8 +326,8 @@ if(BUILD_TESTING AND BINEXPORT_BUILD_TESTING)
     reader/instruction_test.cc
   )
   target_link_libraries(binexport_reader_test PUBLIC
-    gtest_main
-    gmock
+    GTest::gtest_main
+    GTest::gmock
     binexport_reader
     binexport_testing
   )
