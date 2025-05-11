@@ -34,3 +34,4 @@ install(TARGETS ${binexport_bn_plugin_name}
         ARCHIVE DESTINATION binexport-prefix
         RUNTIME DESTINATION binexport-prefix
         LIBRARY DESTINATION binexport-prefix)
+bn_install_plugin(${binexport_bn_plugin_name})

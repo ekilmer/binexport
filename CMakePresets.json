@@ -1,0 +1,33 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "vcpkg",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_MANIFEST_FEATURES": "binaryninja;benchmark"
+      }
+    },
+    {
+      "name": "binja-vcpkg",
+      "description": "Build for Binary Ninja with vcpkg dependencies",
+      "inherits": ["vcpkg"],
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/${presetName}/install",
+        "BINEXPORT_ENABLE_IDAPRO": false,
+        "BINEXPORT_ENABLE_BINARYNINJA": true,
+        "BUILD_TESTING": true
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "binja-vcpkg",
+      "configurePreset": "binja-vcpkg"
+    }
+  ]
+}
