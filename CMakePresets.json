@@ -6,7 +6,7 @@
       "hidden": true,
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
-        "VCPKG_MANIFEST_FEATURES": "binaryninja;benchmark"
+        "VCPKG_MANIFEST_FEATURES": "binaryninja;tests"
       }
     },
     {
@@ -22,12 +22,75 @@
         "BINEXPORT_ENABLE_BINARYNINJA": true,
         "BUILD_TESTING": true
       }
+    },
+    {
+      "name": "ci-vcpkg",
+      "environment": {
+        "VCPKG_ROOT": "$env{VCPKG_INSTALLATION_ROOT}"
+      },
+      "cacheVariables": {
+        "VCPKG_INSTALL_OPTIONS": "--debug"
+      }
+    },
+    {
+      "name": "ci-multi-config",
+      "description": "Speed up multi-config generators by generating only one configuration instead of the defaults",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_CONFIGURATION_TYPES": "Release"
+      }
+    },
+    {
+      "name": "ci-ubuntu-vcpkg",
+      "inherits": ["ci-vcpkg", "binja-vcpkg"],
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-linux-release"
+      },
+      "environment": {
+        "VCPKG_DEFAULT_HOST_TRIPLET": "x64-linux-release"
+      }
+    },
+    {
+      "name": "ci-macos-vcpkg",
+      "generator": "Xcode",
+      "inherits": ["ci-vcpkg", "binja-vcpkg", "ci-multi-config"],
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "universal-macos-release",
+        "CMAKE_OSX_ARCHITECTURES": "x86_64;arm64",
+        "CMAKE_OSX_DEPLOYMENT_TARGET": "11.0",
+        "CMAKE_XCODE_ATTRIBUTE_OTHER_CODE_SIGN_FLAGS": "-o linker-signed"
+      },
+      "environment": {
+        "VCPKG_DEFAULT_HOST_TRIPLET": "universal-macos-release"
+      }
+    },
+    {
+      "name": "ci-windows-vcpkg",
+      "inherits": ["ci-vcpkg", "binja-vcpkg"],
+      "cacheVariables": {
+        "VCPKG_TARGET_TRIPLET": "x64-windows-static-md-release"
+      },
+      "environment": {
+        "VCPKG_DEFAULT_HOST_TRIPLET": "x64-windows-static-md-release"
+      }
     }
   ],
   "buildPresets": [
     {
       "name": "binja-vcpkg",
       "configurePreset": "binja-vcpkg"
+    },
+    {
+      "name": "ci-ubuntu-vcpkg",
+      "configurePreset": "ci-ubuntu-vcpkg"
+    },
+    {
+      "name": "ci-macos-vcpkg",
+      "configurePreset": "ci-macos-vcpkg"
+    },
+    {
+      "name": "ci-windows-vcpkg",
+      "configurePreset": "ci-windows-vcpkg"
     }
   ]
 }
