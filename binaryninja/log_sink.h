@@ -15,14 +15,22 @@
 #ifndef BINARYNINJA_LOG_SINK_H_
 #define BINARYNINJA_LOG_SINK_H_
 
+// clang-format off
+#include "binaryninjaapi.h"  // NOLINT
+// clang-format on
+
 #include <absl/log/log_sink.h>
-#include "third_party/zynamics/binexport/util/logging.h"
 
 namespace security::binexport {
 
 class BinaryNinjaLogSink : public absl::LogSink {
+ public:
+  BinaryNinjaLogSink();
+
  private:
   void Send(const absl::LogEntry& entry) override;
+
+  BinaryNinja::Ref<BinaryNinja::Logger> logger_;
 };
 
 }  // namespace security::binexport

@@ -20,9 +20,14 @@
 
 #include <absl/base/log_severity.h>
 #include <absl/strings/string_view.h>
+
 #include "third_party/zynamics/binexport/util/logging.h"
 
 namespace security::binexport {
+
+BinaryNinjaLogSink::BinaryNinjaLogSink() {
+  logger_ = BinaryNinja::LogRegistry::CreateLogger("BinExport");
+}
 
 void BinaryNinjaLogSink::Send(const absl::LogEntry& entry) {
   BNLogLevel level;
@@ -40,8 +45,7 @@ void BinaryNinjaLogSink::Send(const absl::LogEntry& entry) {
       break;
   }
   absl::string_view message = entry.text_message();
-  BinaryNinja::Log(level, "%*s", static_cast<int>(message.size()),
-                   message.data());
+  logger_->Log(level, "%*s", static_cast<int>(message.size()), message.data());
 }
 
 }  // namespace security::binexport
