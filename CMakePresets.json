@@ -16,7 +16,7 @@
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/${presetName}",
       "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
         "CMAKE_INSTALL_PREFIX": "${sourceDir}/build/${presetName}/install",
         "BINEXPORT_ENABLE_IDAPRO": false,
         "BINEXPORT_ENABLE_BINARYNINJA": true,
