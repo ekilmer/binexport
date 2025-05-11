@@ -24,8 +24,8 @@
 #include "third_party/zynamics/binexport/ida/end_idasdk.inc"    // NOLINT
 // clang-format on
 
-#include "third_party/absl/strings/ascii.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/strings/ascii.h>
+#include <absl/strings/string_view.h>
 #include "third_party/zynamics/binexport/ida/names.h"
 
 namespace security::binexport {

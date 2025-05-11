@@ -15,7 +15,7 @@
 #ifndef IDA_LOG_SINK_H_
 #define IDA_LOG_SINK_H_
 
-#include "third_party/absl/log/log_sink.h"
+#include <absl/log/log_sink.h>
 #include "third_party/zynamics/binexport/util/logging.h"
 
 namespace security::binexport {

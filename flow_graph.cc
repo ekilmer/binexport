@@ -25,10 +25,10 @@
 #include <utility>
 #include <vector>
 
-#include "third_party/absl/container/flat_hash_set.h"
-#include "third_party/absl/log/check.h"
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/container/flat_hash_set.h>
+#include <absl/log/check.h>
+#include <absl/log/log.h>
+#include <absl/strings/str_cat.h>
 #include "third_party/zynamics/binexport/call_graph.h"
 #include "third_party/zynamics/binexport/function.h"
 #include "third_party/zynamics/binexport/util/format.h"

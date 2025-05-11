@@ -4,8 +4,8 @@
 #include <fstream>
 
 #include "gtest/gtest.h"
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/log/log.h>
+#include <absl/strings/str_cat.h>
 #include "third_party/zynamics/binexport/util/filesystem.h"
 
 namespace security::binexport {

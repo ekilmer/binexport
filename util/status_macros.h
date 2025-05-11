@@ -18,9 +18,9 @@
 #ifndef UTIL_STATUS_MACROS_H_
 #define UTIL_STATUS_MACROS_H_
 
-#include "third_party/absl/base/optimization.h"
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/status/statusor.h"
+#include <absl/base/optimization.h>
+#include <absl/status/status.h>
+#include <absl/status/statusor.h>
 
 // Internal helper for concatenating macro values.
 #define NA_MACROS_IMPL_CONCAT_INNER_(x, y) x##y

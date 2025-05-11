@@ -23,14 +23,14 @@
 #include <utility>
 #include <vector>
 
-#include "third_party/absl/log/check.h"
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/memory/memory.h"
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/types/optional.h"
+#include <absl/log/check.h>
+#include <absl/log/log.h>
+#include <absl/memory/memory.h>
+#include <absl/status/status.h>
+#include <absl/strings/str_cat.h>
+#include <absl/types/optional.h>
 #include "third_party/zynamics/binexport/architectures.h"
-#include "third_party/absl/strings/ascii.h"
+#include <absl/strings/ascii.h>
 #include "third_party/zynamics/binexport/reader/graph_utility.h"
 #include "third_party/zynamics/binexport/reader/instruction.h"
 #include "third_party/zynamics/binexport/util/status_macros.h"

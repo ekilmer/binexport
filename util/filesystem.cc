@@ -51,13 +51,13 @@
 #include <system_error>  // NOLINT(build/c++11)
 #include <vector>
 
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/strings/ascii.h"
-#include "third_party/absl/strings/match.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/str_replace.h"  // IWYU pragma: keep
-#include "third_party/absl/strings/string_view.h"
-#include "third_party/absl/strings/strip.h"  // IWYU pragma: keep
+#include <absl/status/status.h>
+#include <absl/strings/ascii.h>
+#include <absl/strings/match.h>
+#include <absl/strings/str_cat.h>
+#include <absl/strings/str_replace.h>  // IWYU pragma: keep
+#include <absl/strings/string_view.h>
+#include <absl/strings/strip.h>  // IWYU pragma: keep
 #include "third_party/zynamics/binexport/util/process.h"
 #include "third_party/zynamics/binexport/util/status_macros.h"
 

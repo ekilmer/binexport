@@ -20,7 +20,7 @@
 
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "third_party/absl/status/status_matchers.h"
+#include <absl/status/status_matchers.h>
 #include "third_party/zynamics/binexport/util/filesystem.h"
 #include "third_party/zynamics/binexport/util/status_macros.h"
 

@@ -18,11 +18,11 @@
 
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "third_party/absl/memory/memory.h"
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/status/status_matchers.h"
-#include "third_party/absl/status/statusor.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/memory/memory.h>
+#include <absl/status/status.h>
+#include <absl/status/status_matchers.h>
+#include <absl/status/statusor.h>
+#include <absl/strings/str_cat.h>
 
 namespace not_absl {
 namespace {

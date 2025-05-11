@@ -18,7 +18,7 @@
 
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/strings/str_cat.h>
 #include "third_party/zynamics/binexport/reader/graph_utility.h"
 #include "third_party/zynamics/binexport/testing.h"
 

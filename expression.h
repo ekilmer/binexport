@@ -20,10 +20,10 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/container/node_hash_map.h"
-#include "third_party/absl/container/node_hash_set.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/container/node_hash_map.h>
+#include <absl/container/node_hash_set.h>
+#include <absl/strings/str_cat.h>
+#include <absl/strings/string_view.h>
 #include "third_party/zynamics/binexport/util/types.h"
 
 #pragma pack(push, 1)

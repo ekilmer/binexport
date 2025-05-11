@@ -17,7 +17,7 @@
 
 #include <cstddef>
 
-#include "third_party/absl/strings/string_view.h"
+#include <absl/strings/string_view.h>
 
 // Returns true if the instruction starting at the first byte in "bytes" is a
 // NOP instruction. NOPs have been taken from the GNU assembler

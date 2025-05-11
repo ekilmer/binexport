@@ -43,11 +43,11 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/base/attributes.h"  // IWYU pragma: keep
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/strings/ascii.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/str_replace.h"  // IWYU pragma: keep
+#include <absl/base/attributes.h>  // IWYU pragma: keep
+#include <absl/status/status.h>
+#include <absl/strings/ascii.h>
+#include <absl/strings/str_cat.h>
+#include <absl/strings/str_replace.h>  // IWYU pragma: keep
 #include "third_party/zynamics/binexport/util/filesystem.h"
 #include "third_party/zynamics/binexport/util/status_macros.h"
 

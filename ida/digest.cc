@@ -22,9 +22,9 @@
 #include "third_party/zynamics/binexport/ida/end_idasdk.inc"    // NOLINT
 // clang-format on
 
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/strings/ascii.h"
-#include "third_party/absl/strings/escaping.h"
+#include <absl/status/status.h>
+#include <absl/strings/ascii.h>
+#include <absl/strings/escaping.h>
 
 namespace security::binexport {
 

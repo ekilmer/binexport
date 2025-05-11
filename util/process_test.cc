@@ -19,8 +19,8 @@
 
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
-#include "third_party/absl/status/status_matchers.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/status/status_matchers.h>
+#include <absl/strings/str_cat.h>
 #include "third_party/zynamics/binexport/util/status_macros.h"
 
 namespace security::binexport {

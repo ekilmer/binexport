@@ -24,10 +24,10 @@
 #include "third_party/zynamics/binexport/ida/end_idasdk.inc"    // NOLINT
 // clang-format on
 
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/status/statusor.h"
-#include "third_party/absl/strings/string_view.h"
-#include "third_party/absl/types/span.h"
+#include <absl/status/status.h>
+#include <absl/status/statusor.h>
+#include <absl/strings/string_view.h>
+#include <absl/types/span.h>
 
 // Small RAII class that displays a wait message for long-running actions.
 class WaitBox {

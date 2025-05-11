@@ -21,7 +21,7 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/container/node_hash_set.h"
+#include <absl/container/node_hash_set.h>
 #include "third_party/zynamics/binexport/operand.h"
 #include "third_party/zynamics/binexport/util/range.h"
 #include "third_party/zynamics/binexport/util/types.h"

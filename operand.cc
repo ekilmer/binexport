@@ -17,7 +17,7 @@
 #include <cstdint>
 #include <string>
 
-#include "third_party/absl/log/check.h"
+#include <absl/log/check.h>
 
 thread_local Expressions Operand::expressions_;
 thread_local Operand::OperandCache Operand::operand_cache_;

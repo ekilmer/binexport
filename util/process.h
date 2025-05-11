@@ -18,9 +18,9 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/status/statusor.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/status/status.h>
+#include <absl/status/statusor.h>
+#include <absl/strings/string_view.h>
 #include "third_party/zynamics/binexport/util/types.h"
 
 namespace security::binexport {

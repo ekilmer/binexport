@@ -17,7 +17,7 @@
 
 #include <fstream>
 
-#include "third_party/absl/container/flat_hash_map.h"
+#include <absl/container/flat_hash_map.h>
 #include "third_party/zynamics/binexport/writer.h"
 
 namespace security::binexport {

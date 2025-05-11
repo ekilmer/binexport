@@ -14,7 +14,7 @@
 
 #include "third_party/zynamics/binexport/ida/util.h"
 
-#include "third_party/absl/strings/string_view.h"
+#include <absl/strings/string_view.h>
 
 namespace security::binexport {
 

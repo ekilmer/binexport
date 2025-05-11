@@ -32,15 +32,15 @@
 #include "third_party/zynamics/binexport/ida/end_idasdk.inc"    // NOLINT
 // clang-format on
 
-#include "third_party/absl/base/attributes.h"
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/memory/memory.h"
-#include "third_party/absl/strings/ascii.h"
-#include "third_party/absl/strings/escaping.h"
-#include "third_party/absl/strings/match.h"
-#include "third_party/absl/strings/numbers.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/time/time.h"
+#include <absl/base/attributes.h>
+#include <absl/log/log.h>
+#include <absl/memory/memory.h>
+#include <absl/strings/ascii.h>
+#include <absl/strings/escaping.h>
+#include <absl/strings/match.h>
+#include <absl/strings/numbers.h>
+#include <absl/strings/str_cat.h>
+#include <absl/time/time.h>
 #include "third_party/zynamics/binexport/binexport2_writer.h"
 #include "third_party/zynamics/binexport/call_graph.h"
 #include "third_party/zynamics/binexport/dump_writer.h"

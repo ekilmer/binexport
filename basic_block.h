@@ -22,7 +22,7 @@
 #include <vector>
 #undef max
 
-#include "third_party/absl/container/btree_map.h"
+#include <absl/container/btree_map.h>
 #include "third_party/zynamics/binexport/instruction.h"
 #include "third_party/zynamics/binexport/util/nested_iterator.h"
 #include "third_party/zynamics/binexport/util/range.h"

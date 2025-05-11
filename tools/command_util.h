@@ -18,8 +18,8 @@
 #include <functional>
 #include <vector>
 
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/status/status.h>
+#include <absl/strings/string_view.h>
 
 namespace security::binexport {
 

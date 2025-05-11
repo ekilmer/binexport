@@ -28,8 +28,8 @@
 #include <utility>
 #include <vector>
 
-#include "third_party/absl/base/attributes.h"
-#include "third_party/absl/types/optional.h"
+#include <absl/base/attributes.h>
+#include <absl/types/optional.h>
 #include "third_party/zynamics/binexport/architectures.h"
 #include "third_party/zynamics/binexport/binexport2.pb.h"
 #include "third_party/zynamics/binexport/reader/instruction.h"

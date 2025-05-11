@@ -19,8 +19,8 @@
 #include <map>
 #include <vector>
 
-#include "third_party/absl/container/btree_map.h"
-#include "third_party/absl/container/flat_hash_map.h"
+#include <absl/container/btree_map.h>
+#include <absl/container/flat_hash_map.h>
 #include "third_party/zynamics/binexport/util/types.h"
 
 class AddressSpace {

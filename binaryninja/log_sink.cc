@@ -18,8 +18,8 @@
 #include "binaryninjaapi.h"  // NOLINT
 // clang-format on
 
-#include "third_party/absl/base/log_severity.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/base/log_severity.h>
+#include <absl/strings/string_view.h>
 #include "third_party/zynamics/binexport/util/logging.h"
 
 namespace security::binexport {

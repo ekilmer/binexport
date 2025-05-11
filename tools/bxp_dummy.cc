@@ -17,10 +17,10 @@
 
 #include <vector>
 
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/str_format.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/status/status.h>
+#include <absl/strings/str_cat.h>
+#include <absl/strings/str_format.h>
+#include <absl/strings/string_view.h>
 #include "third_party/zynamics/binexport/tools/command_util.h"
 #include "third_party/zynamics/binexport/util/filesystem.h"
 

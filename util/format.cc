@@ -4,9 +4,9 @@
 #include <cinttypes>
 #include <cstdio>
 
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/str_format.h"
-#include "third_party/absl/time/time.h"
+#include <absl/strings/str_cat.h>
+#include <absl/strings/str_format.h>
+#include <absl/time/time.h>
 
 namespace security::binexport {
 

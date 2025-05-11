@@ -16,8 +16,8 @@
 
 #include <string>
 
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/log/log.h>
+#include <absl/strings/str_cat.h>
 #include "third_party/zynamics/binexport/util/format.h"
 
 bool SortComments(const Comment& lhs, const Comment& rhs) {

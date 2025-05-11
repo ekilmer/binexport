@@ -15,7 +15,7 @@
 #ifndef IDA_FLOW_ANALYSIS_H_
 #define IDA_FLOW_ANALYSIS_H_
 
-#include "third_party/absl/container/btree_map.h"
+#include <absl/container/btree_map.h>
 #include "third_party/zynamics/binexport/call_graph.h"
 #include "third_party/zynamics/binexport/entry_point.h"
 #include "third_party/zynamics/binexport/expression.h"

@@ -14,7 +14,7 @@
 
 #include "third_party/zynamics/binexport/version.h"
 
-#include "third_party/absl/base/attributes.h"
+#include <absl/base/attributes.h>
 
 namespace security::binexport {
 

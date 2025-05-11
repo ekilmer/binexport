@@ -15,7 +15,7 @@
 #ifndef WRITER_H_
 #define WRITER_H_
 
-#include "third_party/absl/status/status.h"
+#include <absl/status/status.h>
 #include "third_party/zynamics/binexport/address_references.h"
 #include "third_party/zynamics/binexport/comment.h"
 #include "third_party/zynamics/binexport/instruction.h"

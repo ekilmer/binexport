@@ -26,8 +26,8 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/log/check.h"
-#include "third_party/absl/log/log.h"
+#include <absl/log/check.h>
+#include <absl/log/log.h>
 #include "third_party/zynamics/binexport/flow_graph.h"
 #include "third_party/zynamics/binexport/operand.h"
 #include "third_party/zynamics/binexport/virtual_memory.h"

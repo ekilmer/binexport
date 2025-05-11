@@ -34,12 +34,12 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/flags/parse.h"
-#include "third_party/absl/status/status.h"
-#include "third_party/absl/status/statusor.h"
-#include "third_party/absl/strings/match.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/strings/string_view.h"
+#include <absl/flags/parse.h>
+#include <absl/status/status.h>
+#include <absl/status/statusor.h>
+#include <absl/strings/match.h>
+#include <absl/strings/str_cat.h>
+#include <absl/strings/string_view.h>
 #include "third_party/zynamics/binexport/tools/command_util.h"
 #include "third_party/zynamics/binexport/util/filesystem.h"
 #include "third_party/zynamics/binexport/util/process.h"

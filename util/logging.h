@@ -20,9 +20,9 @@
 #include <string>
 #include <thread>  // NOLINT
 
-#include "third_party/absl/base/log_severity.h"
-#include "third_party/absl/log/log_sink.h"
-#include "third_party/absl/status/status.h"
+#include <absl/base/log_severity.h>
+#include <absl/log/log_sink.h>
+#include <absl/status/status.h>
 
 namespace security::binexport {
 

@@ -22,8 +22,8 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/container/inlined_vector.h"
-#include "third_party/absl/types/optional.h"
+#include <absl/container/inlined_vector.h>
+#include <absl/types/optional.h>
 #include "third_party/zynamics/binexport/architectures.h"
 #include "third_party/zynamics/binexport/util/types.h"
 

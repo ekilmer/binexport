@@ -17,7 +17,7 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/log/check.h"
+#include <absl/log/check.h>
 
 int LibraryManager::AddKnownLibrary(const std::string& library_name,
                                     Linkage linkage) {

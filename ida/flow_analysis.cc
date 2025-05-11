@@ -34,8 +34,8 @@
 #include "third_party/zynamics/binexport/ida/end_idasdk.inc"    // NOLINT
 // clang-format on
 
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/strings/str_cat.h"
+#include <absl/log/log.h>
+#include <absl/strings/str_cat.h>
 #include "third_party/zynamics/binexport/flow_analysis.h"
 #include "third_party/zynamics/binexport/ida/arm.h"
 #include "third_party/zynamics/binexport/ida/dalvik.h"

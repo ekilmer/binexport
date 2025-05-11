@@ -39,12 +39,12 @@
 #include <utility>
 #include <vector>
 
-#include "third_party/absl/container/flat_hash_map.h"
-#include "third_party/absl/log/check.h"
-#include "third_party/absl/log/log.h"
-#include "third_party/absl/strings/str_cat.h"
-#include "third_party/absl/time/clock.h"
-#include "third_party/absl/time/time.h"
+#include <absl/container/flat_hash_map.h>
+#include <absl/log/check.h>
+#include <absl/log/log.h>
+#include <absl/strings/str_cat.h>
+#include <absl/time/clock.h>
+#include <absl/time/time.h>
 #include "third_party/zynamics/binexport/binexport2.pb.h"
 #include "third_party/zynamics/binexport/call_graph.h"
 #include "third_party/zynamics/binexport/flow_graph.h"

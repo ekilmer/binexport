@@ -17,7 +17,7 @@
 #include <ios>
 #include <string>
 
-#include "third_party/absl/log/log.h"
+#include <absl/log/log.h>
 
 EntryPoint::EntryPoint(Address address, EntryPoint::Source source,
                        const int flags)

@@ -21,9 +21,9 @@
 #include <utility>
 #include <vector>
 
-#include "third_party/absl/container/btree_set.h"
-#include "third_party/absl/container/node_hash_map.h"
-#include "third_party/absl/container/node_hash_set.h"
+#include <absl/container/btree_set.h>
+#include <absl/container/node_hash_map.h>
+#include <absl/container/node_hash_set.h>
 #include "third_party/zynamics/binexport/comment.h"
 #include "third_party/zynamics/binexport/library_manager.h"
 #include "third_party/zynamics/binexport/util/types.h"

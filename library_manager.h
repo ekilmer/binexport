@@ -19,7 +19,7 @@
 #include <string>
 #include <vector>
 
-#include "third_party/absl/container/flat_hash_map.h"
+#include <absl/container/flat_hash_map.h>
 #include "third_party/zynamics/binexport/util/types.h"
 
 // Theory of operations: this class keeps a list of currently known libraries,
